@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration | Safe Skills Driving School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell course-page-shell">
+    <header class="panel course-page-header">
+      <div>
+        <p class="eyebrow">Course Registration</p>
+        <h1 id="registrationPageTitle">Register And Pay For Your Course</h1>
+        <p class="hero-text" id="registrationPageIntro">Create your student profile first. After that, continue to Stripe to pay for the class and unlock the course.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="ghost-button" href="index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main class="panel course-page-panel">
+      <section class="content-grid registration-layout">
+        <article class="content-card wide">
+          <div class="section-title-row">
+            <h4>Create Student Profile</h4>
+            <span class="section-chip gold">Step 1</span>
+          </div>
+          <form id="registrationForm" class="stack-form">
+            <div class="registration-form-grid">
+              <label>First name<input id="registrationFirstName" type="text" required></label>
+              <label>Last name<input id="registrationLastName" type="text" required></label>
+              <label>Email address<input id="registrationEmail" type="email" required></label>
+              <label>Phone number<input id="registrationPhone" type="tel" required></label>
+              <label>Street address<input id="registrationAddress1" type="text" required></label>
+              <label>Address line 2<input id="registrationAddress2" type="text" placeholder="Apartment, suite, unit, building"></label>
+              <label>City<input id="registrationCity" type="text" required></label>
+              <label>State<input id="registrationState" type="text" value="WI" required></label>
+              <label>ZIP code<input id="registrationZip" type="text" required></label>
+              <label>Birth date<input id="registrationBirthDate" type="date" required></label>
+              <label>Driver license number<input id="registrationDriverLicense" type="text" required></label>
+              <label>Create password<input id="registrationPassword" type="password" minlength="6" required></label>
+            </div>
+            <div class="builder-actions">
+              <button class="primary-button" type="submit">Continue To Stripe Payment</button>
+            </div>
+            <p class="form-note" id="registrationFeedback">Your profile is saved in this browser before payment.</p>
+          </form>
+        </article>
+
+        <article class="content-card">
+          <div class="section-title-row">
+            <h4>Registration Details</h4>
+            <span class="section-chip gold">Step 2</span>
+          </div>
+          <div class="activity-list">
+            <article class="activity-item">
+              <h5>Course price</h5>
+              <p class="activity-meta" id="registrationCoursePrice">$49.00</p>
+            </article>
+            <article class="activity-item">
+              <h5>Payment processor</h5>
+              <p class="activity-meta">Stripe Checkout</p>
+            </article>
+            <article class="activity-item">
+              <h5>After payment</h5>
+              <p class="activity-meta">You return to this site, then log in to the course and begin the training.</p>
+            </article>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="published-course.js"></script>
+  <script src="admin-auth.js"></script>
+  <script src="backend-client.js"></script>
+  <script src="registration.js"></script>
+</body>
+</html>
