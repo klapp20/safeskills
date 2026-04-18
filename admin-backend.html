@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Google Sheets Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell">
+    <nav class="panel admin-area-nav">
+      <a class="admin-nav-link" href="admin.html">Dashboard</a>
+      <a class="admin-nav-link" href="admin-course.html">Course Admin</a>
+      <a class="admin-nav-link active" href="admin-backend.html">Backend</a>
+      <a class="admin-nav-link" href="admin-pages.html">Page Manager</a>
+      <a class="admin-nav-link" href="portal.html">Portal</a>
+    </nav>
+    <main>
+      <section id="adminLocked" class="panel locked-state">
+        <p>Log in from the home page admin area to unlock backend settings.</p>
+      </section>
+      <section id="adminBackendContent" class="dashboard-content hidden">
+        <section class="panel">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Cross-Device Login</p>
+              <h1>Google Sheets Settings</h1>
+            </div>
+            <span class="section-chip gold">Optional</span>
+          </div>
+          <p class="hero-text">Connect a Google Sheets Apps Script web app so student accounts work across phones and computers. This keeps student profile records in a Google Sheet instead of only in one browser.</p>
+        </section>
+        <section class="content-grid">
+          <article class="content-card wide">
+            <div class="section-title-row">
+              <h4>Google Sheets Student Sync</h4>
+              <span class="section-chip gold">Backend</span>
+            </div>
+            <form id="backendSettingsForm" class="stack-form">
+              <label><input id="backendEnabled" type="checkbox"> Enable remote student login sync</label>
+              <label>Apps Script web app URL<input id="backendUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec"></label>
+              <label>Optional shared secret<textarea id="backendSecret" rows="4" placeholder="Paste the same secret you set in the Apps Script file"></textarea></label>
+              <div class="builder-actions">
+                <button class="primary-button" type="submit">Save Backend Settings</button>
+              </div>
+              <p class="form-note" id="backendSettingsFeedback">When enabled, new student registrations sync to Google Sheets and student login can work across devices.</p>
+            </form>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="admin-auth.js"></script>
+  <script src="backend-client.js"></script>
+  <script src="admin-backend.js"></script>
+</body>
+</html>
