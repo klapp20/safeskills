@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Course Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell">
+    <header class="panel course-page-header admin-hero-panel">
+      <div>
+        <p class="eyebrow">Executive Office</p>
+        <h1>Course Admin</h1>
+        <p class="hero-text">Start with your course list, open a course to manage its topics and sub-pages, and review student progress.</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="secondary-button" id="adminLogoutButton" type="button">Logout</button>
+      </div>
+    </header>
+
+    <nav class="panel admin-area-nav">
+      <a class="admin-nav-link" href="admin.html">Dashboard</a>
+      <a class="admin-nav-link active" href="admin-course.html">Course Admin</a>
+      <a class="admin-nav-link" href="admin-create-course.html">Create Course</a>
+      <a class="admin-nav-link" href="admin-students.html">Students</a>
+      <a class="admin-nav-link" href="portal.html">Portal</a>
+    </nav>
+
+    <main>
+      <section id="adminLocked" class="panel locked-state">
+        <p>Log in from the home page admin area to unlock the course administration page.</p>
+      </section>
+
+      <section id="adminCourseContent" class="dashboard-content hidden">
+        <section class="admin-summary-strip">
+          <article class="admin-summary-card">
+            <span class="admin-summary-label">Course Library</span>
+            <strong>Manage every course draft</strong>
+            <p>Keep one published course live while you refine future versions safely.</p>
+          </article>
+          <article class="admin-summary-card">
+            <span class="admin-summary-label">Builder</span>
+            <strong>Create new course flows</strong>
+            <p>Add topics, sub-pages, quiz checkpoints, and the final quiz in a guided builder.</p>
+          </article>
+          <article class="admin-summary-card">
+            <span class="admin-summary-label">Students</span>
+            <strong>Review live progress</strong>
+            <p>Move into the student area when you need to review access, progress, or completions.</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="content-card" id="create-course-link">
+            <div class="section-title-row">
+              <h4>Create Course</h4>
+              <span class="section-chip gold">Builder</span>
+            </div>
+            <p>Open the step-by-step course builder to name the course, set the length and price, add lesson pages with mini quizzes, and build the final pass quiz.</p>
+            <a class="primary-button" href="admin-create-course.html">Create Course</a>
+          </article>
+
+          <article class="content-card" id="course-library-card">
+            <div class="section-title-row">
+              <h4>Course Library</h4>
+              <span class="section-chip gold">Courses</span>
+            </div>
+            <p>Choose a course to open its main administration page for topics, sub-pages, and publishing.</p>
+            <div id="adminCourseList" class="activity-list"></div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="content-card wide">
+            <div class="section-title-row">
+              <h4>Published Course Overview</h4>
+              <span class="section-chip gold">Overview</span>
+            </div>
+            <div class="activity-actions">
+              <button class="small-button" id="downloadPublishedCourseButton" type="button">Download Published Course File</button>
+            </div>
+            <div id="adminCourseOverview" class="activity-list"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin-auth.js"></script>
+  <script src="admin-course-admin.js"></script>
+</body>
+</html>
