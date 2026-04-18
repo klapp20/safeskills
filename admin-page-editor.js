@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
           collected[pageName] = overrides;
         }
       } catch (error) {
+        // Ignore invalid saved overrides for a single page.
       }
     });
 
