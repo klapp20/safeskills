@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Mobile Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="failure-to-yield-homepage.css">
+</head>
+<body class="mobile-home-body">
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <section class="student-status-bar">
+    <div class="wrap student-status-shell">
+      <p class="student-status-text" id="studentCourseStatus">Student course status: Not logged in.</p>
+      <div class="student-status-actions" id="studentCourseStatusActions"></div>
+    </div>
+  </section>
+  <header class="mobile-home-nav-bar">
+    <div class="wrap mobile-home-nav-shell">
+      <span class="mobile-home-nav-title">Safe Skills Driving School</span>
+      <label class="mobile-home-menu-wrap" for="mobileHomeNav">
+        <span class="sr-only">Mobile site navigation</span>
+        <select id="mobileHomeNav" class="mobile-home-menu" onchange="if(this.value){window.location.href=this.value;}">
+          <option value="">Menu</option>
+          <option value="mobile-home.html">Home</option>
+          <option value="registration.html">Start Here</option>
+          <option value="index.html#course-info">Course Info</option>
+          <option value="index.html#faq">FAQ</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap mobile-home-shell">
+    <section class="mobile-home-card">
+      <p class="mini-label">Safe Skills Driving School</p>
+      <h1 class="mobile-home-title">Wisconsin Failure to Yield Course</h1>
+      <p class="mobile-home-copy">A simple mobile view for students who want to register, log in, or continue their course quickly.</p>
+      <div class="mobile-home-badges">
+        <span>2-Hour Online Course</span>
+        <span>Mobile Friendly</span>
+        <span>Wisconsin Support</span>
+      </div>
+      <div class="mobile-home-price">
+        <strong>$35</strong>
+        <span>No Hidden Fees</span>
+      </div>
+    </section>
+
+    <section class="mobile-home-card">
+      <h2 class="mobile-section-title">Create an Account</h2>
+      <p>If you are here for the first time, create your student account and continue to payment.</p>
+      <a class="primary-button compact-signup-button" href="registration.html">Sign Up</a>
+    </section>
+
+    <section class="mobile-home-card">
+      <h2 class="mobile-section-title">Student Login</h2>
+      <p>If you already paid for the course, log in below.</p>
+      <form class="student-login-form condensed-login-form" id="studentHomeLoginForm">
+        <label class="compact-login-label" for="studentHomeEmail">Username</label>
+        <input id="studentHomeEmail" type="email" placeholder="you@example.com" required>
+        <label class="compact-login-label" for="studentHomePassword">Password</label>
+        <input id="studentHomePassword" type="password" placeholder="Password" required>
+        <div class="condensed-login-actions">
+          <button class="secondary-button" type="submit">Login</button>
+          <button class="text-link forgot-login-toggle" id="showForgotStudentLogin" type="button">Forgot password?</button>
+        </div>
+        <p class="form-note" id="studentHomeLoginFeedback">Registered students can log in here after payment to access the portal and course.</p>
+      </form>
+    </section>
+
+    <section class="mobile-home-card mobile-home-links">
+      <a href="course.html">Go To Course</a>
+      <a href="contract.html">Student Contract</a>
+      <a href="portal.html">Student Portal</a>
+      <a href="tel:9203427011">Customer Support</a>
+      <a href="index.html">View Full Site</a>
+    </section>
+  </main>
+
+  <div class="student-modal hidden" id="studentForgotPasswordModal" aria-hidden="true">
+    <div class="student-modal-backdrop" data-close-student-modal="true"></div>
+    <div class="student-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="studentForgotPasswordTitle">
+      <button class="student-modal-close" id="closeForgotStudentLogin" type="button" aria-label="Close forgot password popup">x</button>
+      <h4 id="studentForgotPasswordTitle">Reset Password</h4>
+      <p class="form-note">Enter your registration email and we will send a reset link.</p>
+      <form class="student-login-form" id="studentForgotLoginForm">
+        <label class="compact-login-label" for="studentForgotEmail">Email</label>
+        <input id="studentForgotEmail" type="email" placeholder="you@example.com" required>
+        <button class="primary-button" type="submit">Send Reset Link</button>
+        <p class="form-note" id="studentForgotLoginFeedback">A reset-link popup will be created here for this prototype.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="backend-client.js"></script>
+  <script src="student-access.js"></script>
+</body>
+</html>
