@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Chapter Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page-editor-id="portal.html">
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">SS</span>
+          <div>
+            <p class="eyebrow" data-edit-key="portal-brand">Safe Skills Driving School</p>
+            <h1 data-edit-key="portal-title">Chapter Leadership Hub</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="ghost-button" href="index.html">Home</a>
+          <button class="primary-button" id="jumpToAdminLogin" type="button">Admin Login</button>
+          <button class="secondary-button hidden" id="logoutSession" type="button">Logout</button>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">For chapter heads, members, and executive office coordination</p>
+          <h2 data-edit-key="portal-hero-title">One secure place for toolkits, chapter workflow, and paid member training.</h2>
+          <p class="hero-text" data-edit-key="portal-hero-copy">
+            This prototype now includes the Safe Skills Driving School chapter workspace and a members-only course area
+            with timed lesson pages, quizzes, a final exam, and certificate completion.
+          </p>
+          <ul class="hero-points">
+            <li>Admin document uploads and request form management</li>
+            <li>Chapter membership file submission and executive office requests</li>
+            <li>Course builder, timed pages, quizzes, final test, and certificates</li>
+          </ul>
+        </div>
+
+        <aside class="showcase-card">
+          <p class="showcase-label">Built for your workflow</p>
+          <div class="metric-grid">
+            <article>
+              <span class="metric-value">Admin</span>
+              <span class="metric-label">Upload and manage resources</span>
+            </article>
+            <article>
+              <span class="metric-value">Chapters</span>
+              <span class="metric-label">Send rosters and requests</span>
+            </article>
+            <article>
+              <span class="metric-value">Course</span>
+              <span class="metric-label">Timed lessons and exams</span>
+            </article>
+            <article>
+              <span class="metric-value">Receipt</span>
+              <span class="metric-label">Signup records and notices</span>
+            </article>
+          </div>
+          <div class="showcase-panel">
+            <p class="showcase-title">Included in this build</p>
+            <ul>
+              <li>Kim admin login</li>
+              <li>Registered student portal access</li>
+              <li>Course progress and completion tracking</li>
+              <li>Membership uploads and office requests</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="portal-layout" id="access-panel">
+        <section class="panel dashboard-panel">
+          <div class="dashboard-header">
+            <div>
+              <p class="eyebrow">Portal status</p>
+              <h3 id="welcomeTitle">Safe Skills Driving School Hub</h3>
+              <p id="welcomeText">Registered students can open this portal from the home page after payment.</p>
+            </div>
+            <span class="status-pill" id="portalStatus">Locked</span>
+          </div>
+
+          <div id="lockedState" class="locked-state">
+            <p>The student portal is only for registered students. Return to the home page to log in, or use the admin login bar above for executive office access.</p>
+            <div class="activity-actions">
+              <a class="primary-button" href="index.html">Go To Home Login</a>
+              <a class="secondary-button" href="course.html">Go To Course</a>
+            </div>
+          </div>
+
+          <div id="chapterPortal" class="dashboard-content hidden">
+            <nav class="member-nav" id="memberNav">
+              <button class="member-nav-link active" type="button" data-member-view="home">Home</button>
+              <button class="member-nav-link" type="button" data-member-view="toolkit">Toolkit</button>
+              <button class="member-nav-link" type="button" data-member-view="memberships">Membership Uploads</button>
+              <button class="member-nav-link" type="button" data-member-view="requests">Requests</button>
+              <a class="member-nav-link" href="course.html">Course Center</a>
+              <a class="member-nav-link" href="student-details.html">Student Details</a>
+              <button class="member-nav-link" type="button" data-member-view="activity">Activity</button>
+            </nav>
+
+            <section class="member-view" data-view-panel="home">
+              <section class="content-grid">
+                <article class="content-card status-card">
+                  <div class="section-title-row">
+                    <h4>Marketing Toolkit</h4>
+                    <span class="section-chip">Downloads</span>
+                  </div>
+                  <p>Open the toolkit to download marketing files and chapter resources.</p>
+                  <button class="small-button" type="button" data-member-view="toolkit">Go to Toolkit</button>
+                </article>
+                <article class="content-card status-card">
+                  <div class="section-title-row">
+                    <h4>Upload Memberships</h4>
+                    <span class="section-chip">Roster</span>
+                  </div>
+                  <p>Submit current chapter membership files for executive office review.</p>
+                  <button class="small-button" type="button" data-member-view="memberships">Open Uploads</button>
+                </article>
+                <article class="content-card status-card">
+                  <div class="section-title-row">
+                    <h4>Requests</h4>
+                    <span class="section-chip">Forms</span>
+                  </div>
+                  <p>Send supply, marketing, and office support requests through approved forms.</p>
+                  <button class="small-button" type="button" data-member-view="requests">Open Requests</button>
+                </article>
+                <article class="content-card status-card">
+                  <div class="section-title-row">
+                    <h4>Course Center</h4>
+                    <span class="section-chip">Training</span>
+                  </div>
+                  <p>Open the course page to continue your timed lessons, quizzes, and final test.</p>
+                  <a class="small-button" href="course.html">Open Course Center</a>
+                </article>
+                <article class="content-card status-card">
+                  <div class="section-title-row">
+                    <h4>Student Details</h4>
+                    <span class="section-chip">Record</span>
+                  </div>
+                  <p>Review your contract information, progress tracking, and print your student record.</p>
+                  <a class="small-button" href="student-details.html">Open Student Details</a>
+                </article>
+                <article class="content-card status-card wide">
+                  <div class="section-title-row">
+                    <h4>Recent Activity</h4>
+                    <span class="section-chip">Updates</span>
+                  </div>
+                  <p>Review the latest membership uploads, requests, and course signups from your chapter.</p>
+                  <button class="small-button" type="button" data-member-view="activity">View Activity</button>
+                </article>
+              </section>
+            </section>
+
+            <section class="member-view hidden" data-view-panel="toolkit">
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Marketing Toolkit</h4>
+                  <span class="section-chip">Downloads</span>
+                </div>
+                <div id="chapterDocuments" class="resource-grid"></div>
+              </article>
+            </section>
+
+            <section class="member-view hidden" data-view-panel="memberships">
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Upload Current Memberships</h4>
+                  <span class="section-chip">Roster</span>
+                </div>
+                <form id="membershipUploadForm" class="stack-form">
+                  <label>
+                    Chapter name
+                    <input id="membershipChapterName" type="text" placeholder="Madison Chapter" required>
+                  </label>
+                  <label>
+                    Reporting month
+                    <input id="membershipMonth" type="month" required>
+                  </label>
+                  <label>
+                    Membership file
+                    <input id="membershipFile" type="file" accept=".pdf,.csv,.xls,.xlsx,.doc,.docx" required>
+                  </label>
+                  <button class="primary-button" type="submit">Submit Membership File</button>
+                  <p class="form-note" id="membershipFeedback">Uploaded membership files appear for admin review in this browser.</p>
+                </form>
+              </article>
+            </section>
+
+            <section class="member-view hidden" data-view-panel="requests">
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Request Executive Office Support</h4>
+                  <span class="section-chip">Forms</span>
+                </div>
+                <form id="requestForm" class="stack-form">
+                  <label>
+                    Choose request form
+                    <select id="requestTypeSelect" required></select>
+                  </label>
+                  <div id="dynamicRequestFields" class="dynamic-fields"></div>
+                  <button class="primary-button" type="submit">Send Request</button>
+                  <p class="form-note" id="requestFeedback">Select a form to load the questions you want chapter leaders to answer.</p>
+                </form>
+              </article>
+            </section>
+
+            <section class="member-view hidden" data-view-panel="activity">
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Your Recent Submissions</h4>
+                  <span class="section-chip">Activity</span>
+                </div>
+                <div id="chapterActivity" class="activity-list"></div>
+              </article>
+            </section>
+          </div>
+
+          <div id="adminPortal" class="dashboard-content hidden">
+            <section class="dashboard-grid">
+              <article class="dashboard-card accent">
+                <p class="card-label">Admin</p>
+                <h4>Executive Office</h4>
+                <p>Manage toolkit files, chapter workflow, and member training.</p>
+              </article>
+              <article class="dashboard-card">
+                <p class="card-label">Membership uploads</p>
+                <h4 id="adminMembershipCount">0 files</h4>
+                <p>Chapter roster submissions waiting in this portal.</p>
+              </article>
+              <article class="dashboard-card">
+                <p class="card-label">Course signups</p>
+                <h4 id="adminEnrollmentCount">0 signups</h4>
+                <p>Member enrollments and receipts recorded by the course flow.</p>
+              </article>
+            </section>
+
+            <section class="content-grid">
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Upload Toolkit Document</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <form id="documentUploadForm" class="stack-form">
+                  <label>
+                    Document title
+                    <input id="documentTitle" type="text" placeholder="Spring Marketing Toolkit" required>
+                  </label>
+                  <label>
+                    Category
+                    <input id="documentCategory" type="text" placeholder="Marketing" required>
+                  </label>
+                  <label>
+                    Short description
+                    <input id="documentDescription" type="text" placeholder="Flyers, logos, and social graphics" required>
+                  </label>
+                  <label>
+                    Upload file
+                    <input id="documentFile" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.png,.jpg,.jpeg" required>
+                  </label>
+                  <button class="primary-button" type="submit">Add Document</button>
+                  <p class="form-note" id="documentFeedback">Toolkit uploads become visible to chapter leaders immediately in this browser.</p>
+                </form>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Create Request Form</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <form id="requestTemplateForm" class="stack-form">
+                  <label>
+                    Form title
+                    <input id="templateTitle" type="text" placeholder="Supply Request" required>
+                  </label>
+                  <label>
+                    Description
+                    <input id="templateDescription" type="text" placeholder="Use this for banners, brochures, and outreach materials." required>
+                  </label>
+                  <label>
+                    Fields
+                    <input id="templateFields" type="text" placeholder="Needed item, Event date, Quantity, Notes" required>
+                  </label>
+                  <button class="primary-button" type="submit">Create Form</button>
+                  <p class="form-note" id="templateFeedback">Separate field labels with commas and they will appear for chapter leaders.</p>
+                </form>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Course Settings</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <form id="courseSettingsForm" class="stack-form">
+                  <label>
+                    Course title
+                    <input id="courseSettingsTitle" type="text" placeholder="Safe Skills Driving School Chapter Training" required>
+                  </label>
+                  <label>
+                    Price shown on signup
+                    <input id="courseSettingsPrice" type="text" placeholder="$49.00" required>
+                  </label>
+                  <label>
+                    Short description
+                    <textarea id="courseSettingsDescription" rows="4" placeholder="Describe what members will learn in this course." required></textarea>
+                  </label>
+                  <label>
+                    Passing score percent
+                    <input id="courseSettingsPassingScore" type="number" min="1" max="100" value="80" required>
+                  </label>
+                  <button class="primary-button" type="submit">Save Course Settings</button>
+                  <p class="form-note" id="courseSettingsFeedback">Keep total lesson time at or under 120 minutes.</p>
+                </form>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Add Course Page</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <form id="coursePageForm" class="stack-form">
+                  <label>
+                    Page title
+                    <input id="coursePageTitle" type="text" placeholder="Lesson 1 - Welcome" required>
+                  </label>
+                  <label>
+                    Required time in minutes
+                    <input id="coursePageMinutes" type="number" min="1" max="120" value="5" required>
+                  </label>
+                  <label>
+                    Page content
+                    <textarea id="coursePageContent" rows="6" placeholder="Add the lesson content members must read before moving forward." required></textarea>
+                  </label>
+                  <label>
+                    Quiz question for this page
+                    <input id="coursePageQuizQuestion" type="text" placeholder="What is the main idea of this lesson?">
+                  </label>
+                  <label>
+                    Quiz options
+                    <input id="coursePageQuizOptions" type="text" placeholder="Correct answer, Incorrect answer, Another answer">
+                  </label>
+                  <label>
+                    Correct answer
+                    <input id="coursePageQuizCorrect" type="text" placeholder="Correct answer">
+                  </label>
+                  <button class="primary-button" type="submit">Add Course Page</button>
+                  <p class="form-note" id="coursePageFeedback">If you leave the quiz fields blank, the page will not have a checkpoint quiz.</p>
+                </form>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Add Final Test Question</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <form id="finalExamForm" class="stack-form">
+                  <label>
+                    Question
+                    <input id="finalExamQuestion" type="text" placeholder="What should chapter leaders submit monthly?" required>
+                  </label>
+                  <label>
+                    Answer options
+                    <input id="finalExamOptions" type="text" placeholder="Membership roster, Boat registration, Hunting logs" required>
+                  </label>
+                  <label>
+                    Correct answer
+                    <input id="finalExamCorrect" type="text" placeholder="Membership roster" required>
+                  </label>
+                  <button class="primary-button" type="submit">Add Final Test Question</button>
+                  <p class="form-note" id="finalExamFeedback">Members take the final test after all lesson pages are completed.</p>
+                </form>
+              </article>
+
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Course Builder Overview</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminCourseOverview" class="activity-list"></div>
+              </article>
+
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Toolkit Library</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminDocuments" class="activity-list"></div>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Membership Uploads</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminMembershipUploads" class="activity-list"></div>
+              </article>
+
+              <article class="content-card">
+                <div class="section-title-row">
+                  <h4>Request Forms</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminTemplates" class="activity-list"></div>
+              </article>
+
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Chapter Requests</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminRequests" class="activity-list"></div>
+              </article>
+
+              <article class="content-card wide">
+                <div class="section-title-row">
+                  <h4>Course Signups and Notification Log</h4>
+                  <span class="section-chip gold">Admin</span>
+                </div>
+                <div id="adminEnrollments" class="activity-list"></div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="published-page-overrides.js"></script>
+  <script src="page-content-overrides.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
