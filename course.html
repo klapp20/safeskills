@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Member Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="course-only-body" data-page-editor-id="course.html">
+  <div class="page-shell course-page-shell">
+    <nav class="course-top-nav" aria-label="Course page navigation">
+      <a class="course-top-nav-link" href="index.html">Home</a>
+      <button class="course-top-nav-link course-top-nav-button" id="courseLogoutButton" type="button">Logout</button>
+      <a class="course-top-nav-link" href="tel:9203427011">Customer Support</a>
+    </nav>
+    <p class="course-page-school-title" data-edit-key="course-brand-kicker">Safe Skills Driving School</p>
+    <main class="panel course-page-panel">
+      <div class="course-shell course-shell-full">
+        <aside class="course-sidebar">
+          <label class="course-nav-select-wrap" for="courseNavSelect">
+            <span class="course-nav-mobile-label">Course pages</span>
+            <select id="courseNavSelect" class="course-nav-select"></select>
+          </label>
+          <div id="courseNavMobileList" class="course-nav-mobile-list"></div>
+          <div id="courseNav" class="course-nav"></div>
+        </aside>
+        <section class="course-player">
+          <section class="course-experience-header">
+            <div>
+              <p class="course-page-kicker" data-edit-key="course-hero-kicker">Student Course Area</p>
+              <h2 class="course-experience-title" data-edit-key="course-hero-title">Work through each lesson, complete the quizzes, and finish strong.</h2>
+              <p class="course-experience-copy" data-edit-key="course-hero-copy">Your progress updates as you complete each required step. When you finish the final quiz successfully, your certificate is ready immediately.</p>
+            </div>
+            <div class="course-experience-stats">
+              <article class="course-stat-card">
+                <span class="course-stat-label" data-edit-key="course-stat-1-label">Format</span>
+                <strong data-edit-key="course-stat-1-value">Self-paced</strong>
+              </article>
+              <article class="course-stat-card">
+                <span class="course-stat-label" data-edit-key="course-stat-2-label">Access</span>
+                <strong data-edit-key="course-stat-2-value">Purchased Course</strong>
+              </article>
+              <article class="course-stat-card">
+                <span class="course-stat-label" data-edit-key="course-stat-3-label">Finish</span>
+                <strong data-edit-key="course-stat-3-value">Certificate Ready</strong>
+              </article>
+            </div>
+          </section>
+          <div id="courseOverallProgress" class="course-state course-overall-progress"></div>
+          <div id="courseLessonState" class="course-state"></div>
+          <div id="courseCertificate" class="hidden"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="published-page-overrides.js"></script>
+  <script src="page-content-overrides.js"></script>
+  <script src="published-course.js"></script>
+  <script src="backend-client.js"></script>
+  <script src="course-page.js"></script>
+</body>
+</html>
