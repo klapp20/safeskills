@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Contract</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page-editor-id="contract.html">
+  <div class="top-announcement" data-edit-key="contract-top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell course-page-shell">
+    <main class="panel course-page-panel">
+      <section class="content-grid">
+        <article class="content-card wide">
+          <div class="section-title-row">
+            <h4 data-edit-key="contract-page-title">Safe Skills Driving School Contract</h4>
+            <span class="section-chip gold" data-edit-key="contract-page-chip">Agreement</span>
+          </div>
+          <div class="activity-actions contract-top-actions">
+            <a class="ghost-button" href="registration.html">Back To Edit Registration</a>
+          </div>
+
+          <div class="contract-meta-grid">
+            <article class="student-record-card">
+              <span class="student-record-label">Contract Number</span>
+              <strong id="contractNumberValue">-</strong>
+            </article>
+            <article class="student-record-card">
+              <span class="student-record-label">Contract Date</span>
+              <strong id="contractDateValue">-</strong>
+            </article>
+            <article class="student-record-card">
+              <span class="student-record-label">Course Fee</span>
+              <strong id="contractCourseFeeValue">-</strong>
+            </article>
+            <article class="student-record-card wide-contract-card">
+              <span id="contractOnlineLabel" class="student-record-label" data-edit-key="contract-online-label">Online Classroom Only</span>
+              <strong id="contractOnlineCopy" data-edit-key="contract-online-copy">Includes 2 hours of online classroom. No behind the wheel instruction.</strong>
+            </article>
+            <article class="student-record-card">
+              <span class="student-record-label">Payment Number</span>
+              <strong id="contractPaymentNumberValue">-</strong>
+            </article>
+          </div>
+
+          <div class="contract-copy">
+            <p id="contractParagraph1" data-edit-key="contract-copy-1">I agree to pay the course fee for 2 hours of online classroom. Full payment is due for the instruction listed above.</p>
+            <p id="contractParagraph2" data-edit-key="contract-copy-2">I acknowledge that online learning must be completed within 30 days, beginning on the date the first lesson is started. If the lessons are not completed within 90 days, a $25 extension fee will be applied to allow for an additional 90 days.</p>
+            <p id="contractParagraph3" data-edit-key="contract-copy-3">This school will not refund any tuition or part of tuition if the school is ready, willing and able to fulfill their part of this agreement.</p>
+            <p id="contractParagraph4" data-edit-key="contract-copy-4">I agree to receive text messages and e-mails from Safe Skills Driving School for appointment reminders and other information.</p>
+            <p id="contractParagraph5" data-edit-key="contract-copy-5">This constitutes the entire agreement between the school and the student, no verbal statement or promises will be recognized.</p>
+          </div>
+
+          <div id="contractStudentProfile" class="contract-profile-grid"></div>
+
+          <form id="contractSignatureForm" class="stack-form contract-signature-form">
+            <div class="registration-form-grid contract-signature-grid contract-signature-grid-single">
+              <label>E-signature
+                <input id="contractSignatureName" type="text" placeholder="Type your full legal name" required>
+              </label>
+            </div>
+            <p class="activity-meta">The signature date will be recorded automatically as the day you sign.</p>
+            <label class="contract-checkbox">
+              <input id="contractAgreeCheckbox" type="checkbox" required>
+              <span id="contractAgreementCopy" data-edit-key="contract-agree-copy">I understand and agree to this Safe Skills Driving School contract.</span>
+            </label>
+            <div class="activity-actions">
+              <button class="primary-button" id="contractSubmitButton" type="submit" data-edit-key="contract-submit-label">Sign Contract And Continue</button>
+            </div>
+            <p class="form-note" id="contractSignatureFeedback" data-edit-key="contract-feedback-copy">Type your full name to e-sign this agreement.</p>
+          </form>
+
+          <div id="contractSignedState" class="hidden">
+            <div class="activity-item">
+              <h5 data-edit-key="contract-signed-title">Contract signed</h5>
+              <p class="activity-meta" id="contractSignedSummary"></p>
+            </div>
+            <div class="activity-actions">
+              <a class="primary-button" href="course.html" data-edit-key="contract-course-link" data-edit-attr="href">Go To Course</a>
+              <button class="secondary-button" id="contractPrintButton" type="button" data-edit-key="contract-print-label">Print Or Save PDF</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="published-page-overrides.js"></script>
+  <script src="page-content-overrides.js"></script>
+  <script src="admin-auth.js"></script>
+  <script src="contract.js"></script>
+</body>
+</html>
