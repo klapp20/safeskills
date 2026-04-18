@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Skills Driving School Create Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell">
+    <header class="panel course-page-header">
+      <div></div>
+    </header>
+
+    <nav class="panel admin-area-nav">
+      <a class="admin-nav-link" href="admin.html">Dashboard</a>
+      <a class="admin-nav-link" href="admin-course.html">Course Admin</a>
+      <a class="admin-nav-link active" href="admin-create-course.html">Create Course</a>
+      <a class="admin-nav-link" href="admin-course.html#students">Students</a>
+      <a class="admin-nav-link" href="portal.html">Portal</a>
+    </nav>
+
+    <main>
+      <section id="adminLocked" class="panel locked-state">
+        <p>Sign in with the admin login bar above to unlock the course builder.</p>
+      </section>
+
+      <section id="adminCreateCourseContent" class="dashboard-content hidden">
+        <section class="panel builder-nav-panel">
+          <div class="course-builder-progress">
+            <button class="builder-step active" type="button" data-step-target="1">1. Course Details</button>
+            <button class="builder-step" type="button" data-step-target="2">2. Course Topics</button>
+            <button class="builder-step" type="button" data-step-target="3">3. Topic Sub-Pages</button>
+            <button class="builder-step" type="button" data-step-target="4">4. Course Quiz</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Step By Step</p>
+              <h3>Course Builder</h3>
+            </div>
+            <span id="createCourseStepLabel" class="section-chip gold">Step 1 of 4</span>
+          </div>
+        </section>
+
+        <section class="content-grid admin-builder-grid">
+          <article class="content-card wide create-course-step" data-step-panel="1">
+            <div class="section-title-row">
+              <h4>Step 1: Nameing the Course, Length, and Cost</h4>
+              <span class="section-chip gold">Details</span>
+            </div>
+            <form id="courseBuilderDetailsForm" class="stack-form">
+              <label>Course name<input id="builderCourseTitle" type="text" placeholder="Failure to Yield Right of Way Course Wisconsin" required></label>
+              <label>Course description<textarea id="builderCourseDescription" rows="5" placeholder="Describe what members will learn in this course." required></textarea></label>
+              <label>Total course length in minutes<input id="builderCourseDuration" type="number" min="1" max="120" value="120" required></label>
+              <label>Course cost<input id="builderCoursePrice" type="text" placeholder="$49.00" required></label>
+              <label>Passing score percent<input id="builderCoursePassingScore" type="number" min="1" max="100" value="80" required></label>
+              <div class="builder-actions">
+                <button class="primary-button" type="submit">Save Step 1</button>
+                <button class="secondary-button" id="goToStep2Button" type="button">Next Step</button>
+              </div>
+              <p class="form-note" id="courseBuilderDetailsFeedback">Start with the course name, total length, cost, and passing score.</p>
+            </form>
+          </article>
+
+          <article class="content-card wide create-course-step hidden" data-step-panel="2">
+            <div class="section-title-row">
+              <h4>Step 2: Build Course Topics</h4>
+              <span class="section-chip gold">Topics</span>
+            </div>
+            <form id="builderTopicForm" class="stack-form">
+              <label>Topic title<input id="builderTopicTitle" type="text" placeholder="Topic 1 - Understanding Right of Way" required></label>
+              <label>Topic summary<textarea id="builderTopicSummary" rows="4" placeholder="Describe what this topic covers." required></textarea></label>
+              <div class="builder-actions">
+                <button class="primary-button" type="submit">Add Topic</button>
+                <button class="secondary-button" id="goToStep3Button" type="button">Next Step</button>
+              </div>
+              <p class="form-note" id="builderTopicFeedback">Create the main course topics in the order you want members to complete them.</p>
+            </form>
+            <div id="builderTopicsList" class="activity-list"></div>
+          </article>
+
+          <article class="content-card wide create-course-step hidden" data-step-panel="3">
+            <div class="section-title-row">
+              <h4>Step 3: Build Sub-Pages, Media, and Topic Quiz</h4>
+              <span class="section-chip gold">Sub-Pages</span>
+            </div>
+            <div class="content-card builder-subpage-list-card">
+              <div class="section-title-row">
+                <h4>Sub-Page List</h4>
+                <span class="section-chip gold">Compact View</span>
+              </div>
+              <div id="builderSubpagesList" class="activity-list compact-subpage-list"></div>
+            </div>
+
+            <div class="builder-two-column builder-subpage-editor-layout">
+              <form id="builderSubpageForm" class="stack-form">
+                <label>Choose topic
+                  <select id="builderSubpageTopic" required></select>
+                </label>
+                <label>Sub-page title<input id="builderSubpageTitle" type="text" placeholder="Slide 1 - What Right of Way Means" required></label>
+                <label>Minutes required on this sub-page<input id="builderSubpageMinutes" type="number" min="1" max="120" value="5" required></label>
+                <label>Formatted text / HTML
+                  <textarea id="builderSubpageContent" rows="8" placeholder="Add text, headings, lists, and simple HTML formatting for this slide-sized sub-page." required></textarea>
+                </label>
+                <label>Image upload<input id="builderSubpageImage" type="file" accept="image/*"></label>
+                <label>Video upload<input id="builderSubpageVideo" type="file" accept="video/*"></label>
+                <label>Video URL<input id="builderSubpageVideoUrl" type="url" placeholder="https://..."></label>
+                <div class="builder-actions">
+                  <button class="primary-button" type="submit">Add Sub-Page</button>
+                  <button class="secondary-button" id="goToStep4Button" type="button">Next Step</button>
+                </div>
+                <p class="form-note" id="builderSubpageFeedback">Each sub-page uses a slide-sized presentation area for text, images, and video.</p>
+              </form>
+
+              <div class="content-card builder-preview-card">
+                <div class="section-title-row">
+                  <h4>Slide Preview</h4>
+                  <span class="section-chip gold">16:9</span>
+                </div>
+                <div id="builderSubpagePreview" class="slide-preview-frame"></div>
+              </div>
+            </div>
+
+            <div class="content-card">
+              <div class="section-title-row">
+                <h4>Topic Quiz Builder</h4>
+                <span class="section-chip gold">Per Topic</span>
+              </div>
+              <form id="builderTopicQuizForm" class="stack-form">
+                <label>Choose topic
+                  <select id="builderTopicQuizTopic" required></select>
+                </label>
+                <label>Quiz question<input id="builderTopicQuizQuestion" type="text" placeholder="What must a student do before moving to the next topic?" required></label>
+                <label>Answer options<input id="builderTopicQuizOptions" type="text" placeholder="Correct answer, Wrong answer, Another answer" required></label>
+                <label>Correct answer<input id="builderTopicQuizCorrect" type="text" placeholder="Correct answer" required></label>
+                <div class="builder-actions">
+                  <button class="primary-button" type="submit">Add Topic Quiz Question</button>
+                </div>
+                <p class="form-note" id="builderTopicQuizFeedback">Topic quizzes appear after the sub-pages inside each topic.</p>
+              </form>
+            </div>
+
+            <div id="builderTopicsEditor" class="activity-list"></div>
+          </article>
+
+          <article class="content-card wide create-course-step hidden" data-step-panel="4">
+            <div class="section-title-row">
+              <h4>Step 4: Final Quiz to Pass the Course</h4>
+              <span class="section-chip gold">Final Quiz</span>
+            </div>
+            <form id="builderFinalQuizForm" class="stack-form">
+              <label>Final quiz question<input id="builderFinalQuizQuestion" type="text" placeholder="What is the correct action at an uncontrolled intersection?" required></label>
+              <label>Answer options<input id="builderFinalQuizOptions" type="text" placeholder="Correct answer, Wrong answer, Another answer" required></label>
+              <label>Correct answer<input id="builderFinalQuizCorrect" type="text" placeholder="Correct answer" required></label>
+              <div class="builder-actions">
+                <button class="primary-button" type="submit">Add Final Quiz Question</button>
+                <button class="secondary-button" id="publishCourseButton" type="button">Publish Course</button>
+              </div>
+              <p class="form-note" id="builderFinalQuizFeedback">Members must pass this final quiz to receive the certificate.</p>
+            </form>
+            <div id="builderFinalQuizList" class="activity-list"></div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="content-card wide">
+            <div class="section-title-row">
+              <h4>Draft Course Summary</h4>
+              <span class="section-chip gold">Preview</span>
+            </div>
+            <div id="courseBuilderSummary" class="activity-list"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin-auth.js"></script>
+  <script src="admin-create-course.js"></script>
+</body>
+</html>
