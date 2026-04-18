@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Details | Safe Skills Driving School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-announcement">Driving Lessons conducted in Watertown, Beaver Dam, Mayville and Waupun!</div>
+  <div class="page-shell course-page-shell">
+    <header class="panel course-page-header admin-hero-panel">
+      <div>
+        <p class="eyebrow">Student Record</p>
+        <h1>Your Course Details</h1>
+        <p class="hero-text">Review your contract information, progress tracking, and print your student record when needed.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="ghost-button" href="portal.html">Back To Portal</a>
+        <a class="secondary-button" href="course.html">Go To Course</a>
+      </div>
+    </header>
+
+    <main class="dashboard-content">
+      <section class="content-grid">
+        <article class="content-card wide">
+          <div class="section-title-row">
+            <h4>Student Record</h4>
+            <span class="section-chip gold">Profile</span>
+          </div>
+          <div id="studentRecordGrid" class="student-record-grid"></div>
+          <form id="studentProfileEditForm" class="stack-form hidden">
+            <div class="registration-form-grid">
+              <label>Student name<input id="studentEditFullName" type="text" required></label>
+              <label>Contact number<input id="studentEditPhone" type="tel" required></label>
+              <label>Permit test date<input id="studentEditPermitTestDate" type="date"></label>
+              <label>Street address<input id="studentEditAddress1" type="text" required></label>
+              <label>Address line 2<input id="studentEditAddress2" type="text"></label>
+              <label>City<input id="studentEditCity" type="text" required></label>
+              <label>State<input id="studentEditState" type="text" required></label>
+              <label>ZIP code<input id="studentEditZip" type="text" required></label>
+              <label>Birth date<input id="studentEditBirthDate" type="date" required></label>
+              <label>Permit number<input id="studentEditPermitNumber" type="text" required></label>
+              <label>Student school<input id="studentEditSchool" type="text" required></label>
+            </div>
+            <div class="activity-actions">
+              <button class="primary-button" type="submit">Save Profile</button>
+              <button class="secondary-button" id="cancelStudentProfileEdit" type="button">Cancel</button>
+            </div>
+            <p class="form-note" id="studentProfileEditFeedback">Update your profile information and save it here.</p>
+          </form>
+          <div class="activity-actions" id="studentRecordActions">
+            <button class="secondary-button" id="editStudentProfileButton" type="button">Edit Profile</button>
+            <button class="primary-button" id="studentRecordPrintButton" type="button">Print Or Save PDF</button>
+          </div>
+        </article>
+
+        <article class="content-card wide">
+          <div class="section-title-row">
+            <h4>Progress Tracking</h4>
+            <span class="section-chip gold">Online</span>
+          </div>
+          <div id="studentProgressTable" class="table-wrap"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin-auth.js"></script>
+  <script src="student-details.js"></script>
+</body>
+</html>
